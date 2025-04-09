@@ -7,7 +7,7 @@ let songs = [
     "http://127.0.0.1:5500/Projects/Spotify-Clone/Songs/raanjhan.mp3",
 ];
 
-let currentAudio = new Audio(); // Only one audio instance
+let currentAudio = new Audio();
 
 function getRandomSong() {
     let randomIndex = Math.floor(Math.random() * songs.length);
@@ -33,7 +33,6 @@ function nextFunction() {
     playSong(getRandomSong());
 }
 
-// Attach event listeners to actual buttons
 document.querySelector(".playTheSong").addEventListener("click", playFunction);
 document.querySelector(".prevsong").addEventListener("click", prevFunction);
 document.querySelector(".nextsong").addEventListener("click", nextFunction);
